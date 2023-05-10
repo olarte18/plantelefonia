@@ -1,1 +1,3 @@
 # plantelefonia
+realice el analisis(identificar clases,atributos y metodos) diseño(Diagrama de clases) y construccion (patron mvc) de la siguiente situacion :
+se desea gestionar un plan telefonia movil el plan tiene un numero de celular, un operador una cantidad de minutos y un costo por minuto, calcular el total a pagar teniendo en cuenta que si el operador es "wom" tiene un 50% de descuento.Usar minimo dos metodos constructores 
