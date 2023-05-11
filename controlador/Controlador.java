@@ -29,6 +29,8 @@ public class Controlador implements ActionListener
         this.venPrin.miPanelResultados.mostrarResultado("App lista para usar... \nSe han creado los siguientes tipos de objetos: \nVentanaPrincipal\nPlanTelefonia\nControlador");
     }
 
+
+    
     @Override
     public void actionPerformed(ActionEvent ae) 
     {
@@ -44,12 +46,13 @@ public class Controlador implements ActionListener
         if(comando.equals("calcular"))
         {
             String operador = venPrin.miPanelEntradaDatos.getOperador();
+            int numeroCelular = Integer.parseInt(venPrin.miPanelEntradaDatos.getNumCelular());       
+            int cantidadMinutos = Integer.parseInt(venPrin.miPanelEntradaDatos.getCantidad());    
+            double valorMinutos= Double.parseDouble(venPrin.miPanelEntradaDatos.getValor());
+            PlanTelefonia plan= new PlanTelefonia(numeroCelular,operador,cantidadMinutos,valorMinutos);
             plan.calcularCostoPlan();
-            venPrin.miPanelResultados.mostrarResultado("El sueldo del empleado: " + plan.getCostoPlan());
+            venPrin.miPanelResultados.mostrarResultado("El valor del plan es: " + plan.getCostoPlan());
         }
-
-
-        
         //Salir
         if(comando.equals("salir"))
         {

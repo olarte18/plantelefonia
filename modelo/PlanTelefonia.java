@@ -50,6 +50,6 @@ public class PlanTelefonia
     }
     public double getCostoPlan()
     {
-        return calcularCostoPlan();
+        return costoPlan;
     }
 }
